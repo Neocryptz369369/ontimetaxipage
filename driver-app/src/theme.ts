@@ -1,7 +1,15 @@
 export const theme = {
-  yellow: '#FFC629', yellow2:'#FFD75A',
-  black: '#0E0E10', slate:'#1F2430',
-  white:'#FFFFFF', gray:'#8A8F98', line:'#E7E8EC',
-  green:'#1DB954', red:'#E5484D',
-  font: 'Inter', fontDisplay:'Inter Tight',
+  colors: {
+    bg: "#0B0B0F",
+    surface: "#16161D",
+    text: "#FFFFFF",
+    muted: "#9BA1A6",
+    primary: "#FFC107",
+    primaryText: "#0B0B0F",
+    accent: "#0B5FFF",
+    danger: "#D92D20",
+    success: "#079455",
+    border: "#23232B",
+  },
+  radius: { sm: 6, md: 10, lg: 16 },
 };
