@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "On Time Taxi Driver",
+    "slug": "ott-driver",
+    "scheme": "ottdriver",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#0E0E10"
+    },
+    "ios": {
+      "bundleIdentifier": "com.ontimetaxi.driver"
+    },
+    "android": {
+      "package": "com.ontimetaxi.driver"
+    }
+  }
+}
