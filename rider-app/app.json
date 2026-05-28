@@ -1,25 +1,28 @@
 {
   "expo": {
-    "name": "On Time Taxi",
-    "slug": "ott-rider",
-    "scheme": "ott",
+    "name": "On-Time Taxi",
+    "slug": "on-time-taxi-rider",
     "version": "0.1.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/splash.png",
-      "backgroundColor": "#FFC629"
-    },
+    "userInterfaceStyle": "light",
+    "scheme": "ontimetaxi",
     "ios": {
-      "bundleIdentifier": "com.ontimetaxi.rider",
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "app.ontimetaxi.rider",
+      "config": { "googleMapsApiKey": "REPLACE_ME" },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We use your location to find rides near you."
+      }
     },
     "android": {
-      "package": "com.ontimetaxi.rider"
+      "package": "app.ontimetaxi.rider",
+      "config": { "googleMaps": { "apiKey": "REPLACE_ME" } },
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
     },
-    "plugins": [
-      "expo-router"
-    ]
+    "plugins": ["expo-location"],
+    "extra": {
+      "SUPABASE_URL": "https://YOUR-PROJECT.supabase.co",
+      "SUPABASE_ANON_KEY": "YOUR_ANON_KEY"
+    }
   }
 }

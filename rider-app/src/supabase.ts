@@ -1,4 +1,22 @@
-import { createClient } from '@supabase/supabase-js';
-const URL = process.env.EXPO_PUBLIC_SUPABASE_URL!;
-const KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!;
-export const supabase = createClient(URL, KEY);
+import "react-native-url-polyfill/auto";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createClient } from "@supabase/supabase-js";
+import Constants from "expo-constants";
+
+const url = (Constants.expoConfig?.extra as any)?.SUPABASE_URL as string;
+const anonKey = (Constants.expoConfig?.extra as any)?.SUPABASE_ANON_KEY as string;
+
+export const supabase = createClient(url, anonKey, {
+  auth: {
+    storage: AsyncStorage,
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: false,
+  },
+});
+
+export async function callEdge<T>(name: string, body: any): Promise<T> {
+  const { data, error } = await supabase.functions.invoke(name, { body });
+  if (error) throw error;
+  return data as T;
+}

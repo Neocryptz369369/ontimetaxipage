@@ -1,37 +1,80 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import MapView from 'react-native-maps';
-import { theme } from '../theme';
+import { useEffect, useState } from "react";
+import { View, Text, ActivityIndicator, Pressable, Alert } from "react-native";
+import MapView, { Marker } from "react-native-maps";
+import { useRoute, useNavigation } from "@react-navigation/native";
+import { supabase } from "../supabase";
+import { theme } from "../theme";
 
 export default function EnRoute() {
+  const route = useRoute<any>();
+  const nav = useNavigation<any>();
+  const { ride_id } = route.params;
+  const [ride, setRide] = useState<any>(null);
+  const [driverLoc, setDriverLoc] = useState<{lat:number,lng:number} | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      const { data } = await supabase.from("rides").select("*").eq("id", ride_id).single();
+      if (active) setRide(data);
+    })();
+
+    const rideChan = supabase
+      .channel(`ride-${ride_id}`)
+      .on("postgres_changes",
+        { event: "UPDATE", schema: "public", table: "rides", filter: `id=eq.${ride_id}` },
+        (payload) => {
+          setRide(payload.new);
+          if (payload.new.status === "completed") nav.replace("Rate", { ride_id });
+        })
+      .subscribe();
+
+    const pingChan = supabase
+      .channel(`pings-${ride_id}`)
+      .on("postgres_changes",
+        { event: "INSERT", schema: "public", table: "driver_pings", filter: `ride_id=eq.${ride_id}` },
+        (payload) => setDriverLoc({ lat: Number(payload.new.lat), lng: Number(payload.new.lng) }))
+      .subscribe();
+
+    return () => {
+      active = false;
+      supabase.removeChannel(rideChan);
+      supabase.removeChannel(pingChan);
+    };
+  }, [ride_id]);
+
+  async function cancel() {
+    Alert.alert("Cancel ride?", "Driver may charge a cancellation fee.", [
+      { text: "No" },
+      { text: "Yes, cancel", style: "destructive", onPress: async () => {
+        await supabase.from("rides").update({ status: "canceled", canceled_at: new Date().toISOString(), cancel_reason: "rider_canceled" }).eq("id", ride_id);
+        nav.popToTop();
+      }},
+    ]);
+  }
+
+  if (!ride) return <View style={{ flex: 1, justifyContent: "center" }}><ActivityIndicator /></View>;
+
   return (
-    <View style={{flex:1}}>
-      <MapView style={{flex:1}} initialRegion={{latitude:38.2776,longitude:-85.7372,latitudeDelta:0.05,longitudeDelta:0.05}}/>
-      <View style={s.card}>
-        <Text style={s.eta}>🚕 Arriving in 6 min</Text>
-        <View style={s.row}>
-          <View style={s.pic}><Text style={{fontWeight:'700'}}>MR</Text></View>
-          <View style={{flex:1,marginLeft:12}}>
-            <Text style={{fontWeight:'700',fontSize:15}}>Mike R.  ⭐ 4.9</Text>
-            <Text style={{color:'#666',fontSize:12}}>Black Camry · ABC 123</Text>
-          </View>
-        </View>
-        <View style={s.acts}>
-          <TouchableOpacity style={s.act}><Text>💬</Text><Text style={s.actL}>Message</Text></TouchableOpacity>
-          <TouchableOpacity style={s.act}><Text>📞</Text><Text style={s.actL}>Call</Text></TouchableOpacity>
-          <TouchableOpacity style={s.act}><Text>🛡️</Text><Text style={s.actL}>Share</Text></TouchableOpacity>
-          <TouchableOpacity style={[s.act,{backgroundColor:'#FEE'}]}><Text>🆘</Text><Text style={[s.actL,{color:theme.red}]}>SOS</Text></TouchableOpacity>
-        </View>
+    <View style={{ flex: 1, backgroundColor: theme.colors.bg }}>
+      <MapView style={{ flex: 1 }}
+        initialRegion={{
+          latitude: Number(ride.pickup_lat), longitude: Number(ride.pickup_lng),
+          latitudeDelta: 0.05, longitudeDelta: 0.05,
+        }}>
+        <Marker coordinate={{ latitude: Number(ride.pickup_lat), longitude: Number(ride.pickup_lng) }} pinColor="green" title="Pickup" />
+        <Marker coordinate={{ latitude: Number(ride.dropoff_lat), longitude: Number(ride.dropoff_lng) }} pinColor="red" title="Drop-off" />
+        {driverLoc && <Marker coordinate={{ latitude: driverLoc.lat, longitude: driverLoc.lng }} title="Driver" pinColor="orange" />}
+      </MapView>
+      <View style={{ padding: 16, gap: 8, borderTopWidth: 1, borderColor: theme.colors.border }}>
+        <Text style={{ fontSize: 18, fontWeight: "700", color: theme.colors.text }}>Status: {ride.status}</Text>
+        <Text style={{ color: theme.colors.muted }}>Fare: ${Number(ride.quoted_fare).toFixed(2)}</Text>
+        {ride.status !== "completed" && ride.status !== "canceled" && (
+          <Pressable onPress={cancel} style={{ padding: 14, borderRadius: 12, backgroundColor: theme.colors.danger, alignItems: "center" }}>
+            <Text style={{ color: "white", fontWeight: "700" }}>Cancel ride</Text>
+          </Pressable>
+        )}
       </View>
     </View>
   );
 }
-const s = StyleSheet.create({
-  card:{backgroundColor:'#fff',padding:18,borderTopLeftRadius:24,borderTopRightRadius:24,marginTop:-20},
-  eta:{textAlign:'center',backgroundColor:theme.black,color:theme.yellow,padding:8,borderRadius:24,fontWeight:'700',alignSelf:'center',paddingHorizontal:18,marginBottom:14},
-  row:{flexDirection:'row',alignItems:'center',marginBottom:14},
-  pic:{width:48,height:48,borderRadius:24,backgroundColor:theme.yellow,alignItems:'center',justifyContent:'center'},
-  acts:{flexDirection:'row',gap:8},
-  act:{flex:1,backgroundColor:'#F4F5F7',padding:10,borderRadius:10,alignItems:'center'},
-  actL:{fontSize:11,fontWeight:'600',marginTop:2},
-});
