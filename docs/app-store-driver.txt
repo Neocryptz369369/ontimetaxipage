@@ -1,0 +1,20 @@
+On-Time Taxi Driver — Drive. Earn. Cash out weekly.
+
+Join a driver-first platform with transparent earnings and weekly direct deposit via Stripe.
+
+FEATURES
+• Real-time ride offers with upfront fare
+• Built-in navigation
+• Track earnings by day, week, and trip
+• Weekly direct deposit to your bank
+• In-app chat with riders
+• Tips paid out same week
+• Background location for accurate dispatch
+
+REQUIREMENTS
+• Valid driver's license and insurance
+• Vehicle 2010 or newer (varies by city)
+• Pass background check
+• Smartphone with GPS
+
+Apply in-app — most drivers approved within 48 hours.
