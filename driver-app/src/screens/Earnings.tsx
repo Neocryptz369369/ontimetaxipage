@@ -1,50 +1,59 @@
-import { useEffect, useState } from "react";
-import { View, Text, FlatList, ActivityIndicator } from "react-native";
-import { supabase } from "../supabase";
-import { theme } from "../theme";
+import React, { useEffect, useState } from 'react'
+import { View, Text, FlatList, ActivityIndicator } from 'react-native'
+import { supabase } from '../supabase'
+import { theme } from '../theme'
+
+type Payout = {
+  id: string; period_id: string; gross_cents: number; tips_cents: number;
+  fees_cents: number; net_cents: number; ride_count: number; status: string;
+  period: { starts_on: string; ends_on: string }
+}
 
 export default function Earnings() {
-  const [rides, setRides] = useState<any[] | null>(null);
+  const [rows, setRows] = useState<Payout[] | null>(null)
 
   useEffect(() => {
     (async () => {
-      const { data: sess } = await supabase.auth.getSession();
-      const id = sess.session?.user.id;
-      if (!id) return setRides([]);
-      const since = new Date(); since.setDate(since.getDate() - 30);
-      const { data } = await supabase.from("rides")
-        .select("id, completed_at, tier_code, quoted_fare, final_fare, pickup_address, dropoff_address")
-        .eq("driver_id", id).eq("status", "completed")
-        .gte("completed_at", since.toISOString())
-        .order("completed_at", { ascending: false });
-      setRides(data ?? []);
-    })();
-  }, []);
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+      const { data } = await supabase.from('driver_payouts')
+        .select('*, period:payout_periods(starts_on,ends_on)')
+        .eq('driver_id', user.id).order('created_at', { ascending: false })
+      setRows((data as any) ?? [])
+    })()
+  }, [])
 
-  if (rides === null) return <View style={{ flex: 1, backgroundColor: theme.colors.bg, justifyContent: "center" }}><ActivityIndicator /></View>;
-  const total = rides.reduce((s, r) => s + Number(r.final_fare ?? r.quoted_fare ?? 0), 0);
+  if (!rows) return <ActivityIndicator style={{ flex: 1 }} />
+
+  const lifetime = rows.reduce((s, r) => s + r.net_cents, 0)
 
   return (
-    <View style={{ flex: 1, backgroundColor: theme.colors.bg }}>
-      <View style={{ padding: 16 }}>
-        <Text style={{ color: theme.colors.muted }}>Last 30 days</Text>
-        <Text style={{ color: theme.colors.text, fontSize: 32, fontWeight: "800" }}>${total.toFixed(2)}</Text>
-        <Text style={{ color: theme.colors.muted }}>{rides.length} rides</Text>
-      </View>
+    <View style={{ flex: 1, padding: 20 }}>
+      <Text style={{ fontSize: 14, color: theme.muted }}>Lifetime earnings</Text>
+      <Text style={{ fontSize: 36, fontWeight: '700', color: theme.text }}>
+        ${(lifetime / 100).toFixed(2)}
+      </Text>
       <FlatList
-        data={rides}
+        data={rows}
         keyExtractor={r => r.id}
+        contentContainerStyle={{ gap: 10, paddingTop: 16 }}
         renderItem={({ item }) => (
-          <View style={{ paddingHorizontal: 16, paddingVertical: 12, borderTopWidth: 1, borderColor: theme.colors.border }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-              <Text style={{ color: theme.colors.text, fontWeight: "700" }}>{item.tier_code}</Text>
-              <Text style={{ color: theme.colors.text, fontWeight: "700" }}>${Number(item.final_fare ?? item.quoted_fare).toFixed(2)}</Text>
+          <View style={{ padding: 14, backgroundColor: '#fff', borderRadius: 12, borderWidth: 1, borderColor: '#eee' }}>
+            <Text style={{ fontWeight: '600', color: theme.text }}>
+              {item.period.starts_on} → {item.period.ends_on}
+            </Text>
+            <Text style={{ color: theme.muted, fontSize: 12, marginTop: 4 }}>
+              {item.ride_count} rides · status: {item.status}
+            </Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 8 }}>
+              <Text>Gross ${(item.gross_cents/100).toFixed(2)}</Text>
+              <Text>Tips ${(item.tips_cents/100).toFixed(2)}</Text>
+              <Text>Fee -${(item.fees_cents/100).toFixed(2)}</Text>
+              <Text style={{ fontWeight: '700' }}>Net ${(item.net_cents/100).toFixed(2)}</Text>
             </View>
-            <Text style={{ color: theme.colors.muted, fontSize: 12 }} numberOfLines={1}>{item.pickup_address} → {item.dropoff_address}</Text>
-            <Text style={{ color: theme.colors.muted, fontSize: 11 }}>{new Date(item.completed_at).toLocaleString()}</Text>
           </View>
         )}
       />
     </View>
-  );
+  )
 }
