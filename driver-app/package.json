@@ -29,7 +29,10 @@
     "expo-image-picker": "~15.0.7",
     "i18next": "^23.11.5",
     "react-i18next": "^14.1.2",
-    "expo-localization": "~15.0.3"
+    "expo-localization": "~15.0.3",
+    "expo-notifications": "~0.28.0",
+    "expo-device": "~6.0.0",
+    "expo-linking": "~6.3.0"
   },
   "devDependencies": {
     "@types/react": "~18.2.79",

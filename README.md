@@ -90,3 +90,9 @@ Standard · XL · Country Run · Long Haul · Pet · Wheelchair · Senior Assist
 
 ## License
 Proprietary © On Time Taxi
+
+## 🚀 Quick start
+```bash
+./scripts/bootstrap.sh
+```
+Then fill `.env` files and run `supabase db push && supabase functions deploy --no-verify-jwt`.
