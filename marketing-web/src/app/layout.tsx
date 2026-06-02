@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="font-extrabold text-xl">🚖 On-Time Taxi</Link>
             <nav className="hidden md:flex gap-6 text-sm font-medium">
-              <Link href="/">Ride</Link>
+              <Link href="/drive">Ride</Link>
               <Link href="/drive">Drive</Link>
               <Link href="/cities">Cities</Link>
               <Link href="/support">Support</Link>
