@@ -4,7 +4,7 @@ export default function Drive() {
      <h1 className="text-5xl font-extrabold mb-4">Ride with On-Time Taxi</h1>
      <p className="text-xl text-gray-700 mb-10">Book a safe, simple ride when you need to go anywhere in the city.</p>
       <div className="bg-brand text-white rounded-2xl p-8 mb-12">
-        <div className="text-3xl font-bold mb-2">80% + 100% tips</div>
+        <div className="text-3xl font-bold mb-2">Need a ride now or later?</div>
         <p>You keep 80 cents of every dollar fare, plus every penny of every tip. Industry-best split.</p>
       </div>
       <h2 className="text-3xl font-bold mb-6">Requirements</h2>
