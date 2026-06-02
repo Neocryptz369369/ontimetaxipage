@@ -1,7 +1,7 @@
 export default function Drive() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-extrabold mb-4">Drive with On-Time Taxi</h1>
+     <h1 className="text-5xl font-extrabold mb-4">Ride with On-Time Taxi</h1>
       <p className="text-xl text-gray-700 mb-10">Keep more of what you earn. Cash out weekly. Drive when you want.</p>
       <div className="bg-brand text-white rounded-2xl p-8 mb-12">
         <div className="text-3xl font-bold mb-2">80% + 100% tips</div>
@@ -9,7 +9,7 @@ export default function Drive() {
       </div>
       <h2 className="text-3xl font-bold mb-6">Requirements</h2>
       <ul className="space-y-3 text-lg mb-12">
-        <li>✓ Valid US driver's license (1+ year)</li>
+        <li>Fast local rides</li>
         <li>✓ Vehicle 2010 or newer, 4 doors</li>
         <li>✓ Current insurance + registration in your name</li>
         <li>✓ Pass background check (we run it, free)</li>
