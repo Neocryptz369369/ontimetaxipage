@@ -1,1 +1,42 @@
-aW1wb3J0ICIuL2dsb2JhbHMuY3NzIjsKaW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKZXhwb3J0IGNvbnN0IG1ldGFkYXRhID0geyB0aXRsZTogIk9uLVRpbWUgVGF4aSAtLSBGYXN0LCBmYWlyIHJpZGVzIG9uIGRlbWFuZCIsIGRlc2NyaXB0aW9uOiAiQm9vayBhIHJpZGUgaW4gc2Vjb25kcy4gUmVhbCB1cGZyb250IHByaWNpbmcuIFRydXN0ZWQgbG9jYWwgZHJpdmVycy4iIH07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBSb290TGF5b3V0KHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pIHsKICByZXR1cm4gKAogICAgPGh0bWwgbGFuZz0iZW4iPgogICAgICA8Ym9keSBjbGFzc05hbWU9ImJnLXdoaXRlIHRleHQtYnJhbmQiPgogICAgICAgIDxoZWFkZXIgY2xhc3NOYW1lPSJib3JkZXItYiBiZy13aGl0ZSBzdGlja3kgdG9wLTAgei01MCI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWF4LXctNnhsIG14LWF1dG8gcHgtNiBoLTE2IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiI+CiAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii8iIGNsYXNzTmFtZT0iZm9udC1leHRyYWJvbGQgdGV4dC14bCI+8J+OliBPbi1UaW1lIFRheGk8L0xpbms+CiAgICAgICAgICAgIDxuYXYgY2xhc3NOYW1lPSJoaWRkZW4gbWQ6ZmxleCBnYXAtNiB0ZXh0LXNtIGZvbnQtbWVkaXVtIj4KICAgICAgICAgICAgICA8TGluayBocmVmPSIvcmlkZSI+UmlkZTwvTGluaz4KICAgICAgICAgICAgICA8TGluayBocmVmPSIvZHJpdmUiPkRyaXZlPC9MaW5rPgogICAgICAgICAgICAgIDxMaW5rIGhyZWY9Ii9jaXRpZXMiPkNpdGllczwvTGluaz4KICAgICAgICAgICAgICA8TGluayBocmVmPSIvc3VwcG9ydCI+U3VwcG9ydDwvTGluaz4KICAgICAgICAgICAgPC9uYXY+CiAgICAgICAgICAgIDxMaW5rCiAgICAgICAgICAgICAgaHJlZj0iL2dldC1hcHAiCiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJiZy1icmFuZCB0ZXh0LXdoaXRlIHRleHQtc20gcHgtNCBweS0yIHJvdW5kZWQtbGcIGZvbnQtc2VtaWJvbGQiCiAgICAgICAgICAgID4KICAgICAgICAgICAgICBHZXQgYXBwCiAgICAgICAgICAgIDwvTGluaz4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvaGVhZGVyPgogICAgICAgIDxtYWluPntjaGlsZHJlbn08L21haW4+CiAgICAgICAgPGZvb3RlciBjbGFzc05hbWU9ImJvcmRlci10IG10LTIwIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy02eGwgbXgtYXV0byBweC02IHB5LTEwIGdyaWQgbWQ6Z3JpZC1jb2xzLTQgZ2FwLTggdGV4dC1zbSI+CiAgICAgICAgICAgIDxkaXY+PGRpdiBjbGFzc05hbWU9ImZvbnQtYm9sZCBtYi0zIj5Pbi1UaW1lIFRheGk8L2Rpdj48cCBjbGFzc05hbWU9InRleHQtZ3JheS02MDAiPkZhc3QsIGZhaXIgcmlkZXMgb24gZGVtYW5kLjwvcD48L2Rpdj4KICAgICAgICAgICAgPGRpdj48ZGl2IGNsYXNzTmFtZT0iZm9udC1ib2xkIG1iLTMiPkNvbXBhbnk8L2Rpdj48dWwgY2xhc3NOYW1lPSJzcGFjZS15LTIgdGV4dC1ncmF5LTYwMCI+PGxpPjxMaW5rIGhyZWY9Ii9hYm91dCI+QWJvdXQ8L0xpbms+PC9saT48bGk+PExpbmsgaHJlZj0iL2NpdGllcyI+Q2l0aWVzPC9MaW5rPjwvbGk+PGxpPjxMaW5rIGhyZWY9Ii9kcml2ZSI+RHJpdmUgd2l0aCB1czwvTGluaz48L2xpPjwvdWw+PC9kaXY+CiAgICAgICAgICAgIDxkaXY+PGRpdiBjbGFzc05hbWU9ImZvbnQtYm9sZCBtYi0zIj5IZWxwPC9kaXY+PHVsIGNsYXNzTmFtZT0ic3BhY2UteS0yIHRleHQtZ3JheS02MDAiPjxsaT48TGluayBocmVmPSIvc3VwcG9ydCI+U3VwcG9ydDwvTGluaz48L2xpPjxsaT48TGluayBocmVmPSIvc2FmZXR5Ij5TYWZldHk8L0xpbms+PC9saT48bGk+PExpbmsgaHJlZj0iL2xvc3QtZm91bmQiPkxvc3QgJiBmb3VuZDwvTGluaz48L2xpPjxsaT48TGluayBocmVmPSIvYWRtaW4iPkFkbWluIEA8L0xpbms+PC9saT48L3VsPjwvZGl2PgogICAgICAgICAgICA8ZGl2PjxkaXYgY2xhc3NOYW1lPSJmb250LWJvbGQgbWItMyI+TGVnYWw8L2Rpdj48dWwgY2xhc3NOYW1lPSJzcGFjZS15LTIgdGV4dC1ncmF5LTYwMCI+PGxpPjxMaW5rIGhyZWY9Ii90ZXJtcyI+VGVybXM8L0xpbms+PC9saT48bGk+PExpbmsgaHJlZj0iL3ByaXZhY3kiPlByaXZhY3k8L0xpbms+PC9saT48bGk+PExpbmsgaHJlZj0iL2FjY2Vzc2liaWxpdHkiPkFjY2Vzc2liaWxpdHk8L0xpbms+PC9saT48L3VsPjwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1jZW50ZXIgdGV4dC14cyB0ZXh0LWdyYXktNTAwIHBiLTYiPgogICAgICAgICAgICA8ZGl2PsKpIDIwMjY8L2Rpdj4KICAgICAgICAgICAgPGRpdj5OZW9jcnlwdHogTExDPC9kaXY+CiAgICAgICAgICAgIDxkaXY+YWxsIHJpZ2h0cyByZXNlcnZlZC48L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZm9vdGVyPgogICAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgKTsKfQ==
+import "./globals.css";
+import Link from "next/link";
+
+export const metadata = { 
+  title: "On-Time Taxi -- Fast, fair rides on demand", 
+  description: "Book a ride in seconds. Real upfront pricing. Trusted local drivers." 
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className="bg-white text-brand">
+        <header className="border-b bg-white sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <Link href="/" className="font-extrabold text-xl"> On-Time Taxi</Link>
+            <nav className="hidden md:flex gap-6 text-sm font-medium">
+              <Link href="/ride">Ride</Link>
+              <Link href="/drive">Drive</Link>
+              <Link href="/cities">Cities</Link>
+              <Link href="/support">Support</Link>
+            </nav>
+            <Link
+              href="/get-app"
+              className="bg-brand text-white text-sm px-4 py-2 rounded-lg font-semibold"
+            >
+              Get app
+            </Link>
+          </div>
+        </header>
+        <main>{children}</main>
+        <footer className="border-t mt-20">
+          <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-4 gap-8 text-sm">
+            <div>
+              <div className="font-bold mb-3">On-Time Taxi</div>
+              <p className="text-gray-600">Fast, fair rides on demand.</p>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}
