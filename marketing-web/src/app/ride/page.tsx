@@ -2,7 +2,7 @@ export default function Drive() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
      <h1 className="text-5xl font-extrabold mb-4">Ride with On-Time Taxi</h1>
-      <p className="text-xl text-gray-700 mb-10">Keep more of what you earn. Cash out weekly. Drive when you want.</p>
+     <p className="text-xl text-gray-700 mb-10">Book a safe, simple ride when you need to go anywhere in the city.</p>
       <div className="bg-brand text-white rounded-2xl p-8 mb-12">
         <div className="text-3xl font-bold mb-2">80% + 100% tips</div>
         <p>You keep 80 cents of every dollar fare, plus every penny of every tip. Industry-best split.</p>
