@@ -1,1 +1,108 @@
-aW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZSgpIHsKICByZXR1cm4gKAogICAgPD4KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJiZy1ncmFkaWVudC10by1iIGZyb20tYnJhbmQgdG8tWzFhNGQ4Zl0gdGV4dC13aGl0ZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTYgcHktMjQgZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtMTIgaXRlbXMtY2VudGVyIj4KICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtNXhsIG1kOnRleHQtN2hsIGZvbnQtZXh0cmFib2xkIGxlYWRpbmctdGlnaHQiPkdldCB0aGVyZS48YnIvPk9uIHRpbWUuIEV2ZXJ5IHRpbWUuPC9oMT4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC02IHRleHQteGwgdGV4dC13aGl0ZS85MCI+UmVhbCB1cGZyb250IHByaWNpbmcuIFRydXN0ZWQgbG9jYWwgZHJpdmVycy4gTm8gc3VyZ2Ugc3VycHJpc2VzIGhpZGRlbiBpbiBmaW5lIHByaW50LjwvcD4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTggZmxleCBmbGV4LXdyYXAgZ2FwLTMiPgogICAgICAgICAgICAgIDxMaW5rCiAgICAgICAgICAgICAgICBocmVmPSIvZ2V0LWFwcC9pcGhvbmUiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9ImJnLXdoaXRlIHRleHQtYnJhbmQgZm9udC1zZW1pYm9sZCBweC02IHB5LTMgcm91bmRlZC1sZyIKICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICBHZXQgYXBwIGZvciBpUGhvbmUKICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgICAgPExpbmsKICAgICAgICAgICAgICAgIGhyZWY9Ii9nZXQtYXBwL2FuZHJvaWQiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9ImJnLXdoaXRlIHRleHQtYnJhbmQgZm9udC1zZW1pYm9sZCBweC02IHB5LTMgcm91bmRlZC1sZyIKICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICBHZXQgYXBwIGZvciBBbmRyb2lkCiAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC00IHRleHQtc20gdGV4dC13aGl0ZS83MCI+CiAgICAgICAgICAgICAgTmVlZCB0aGUgYXBwPyA8TGluayBocmVmPSIvZ2V0LWFwcCIgY2xhc3NOYW1lPSJ1bmRlcmxpbmUiPkNob29zZSB5b3VyIGRldmljZSDihpI8L0xpbms+CiAgICAgICAgICAgIDwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImJnLXdoaXRlIHRleHQtYnJhbmQgcm91bmRlZC0yeGwgcC02IHNoYWRvdy0yeGwiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZm9udC1ib2xkIHRleHQtbGcgbWItNCI+RXN0aW1hdGUgeW91ciBmYXJlPC9kaXY+CiAgICAgICAgICAgIDxpbnB1dCBjbGFzc05hbWU9InctZnVsbCBib3JkZXIgcm91bmRlZC1sZyBweC0zIHB5LTIgbWItMyIgcGxhY2Vob2xkZXI9IlBpY2t1cCBhZGRyZXNzIiAvPgogICAgICAgICAgICA8aW5wdXQgY2xhc3NOYW1lPSJ3LWZ1bGwgYm9yZGVyIHJvdW5kZWQtbGcgcHgtMyBweS0yIG1iLTMiIHBsYWNlaG9sZGVyPSJXaGVyZSB0bz8iIC8+CiAgICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPSJ3LWZ1bGwgYmctYnJhbmQgdGV4dC13aGl0ZSBmb250LXNlbWlib2xkIHB5LTMgcm91bmRlZC1sZyI+U2VlIHByaWNlPC9idXR0b24+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LWdyYXktNTAwIG10LTMiPk5vIHNpZ251cCByZXF1aXJlZCBmb3IgZXN0aW1hdGUuPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KCiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT0ibWF4LXctNnhsIG14LWF1dG8gcHgtNiBweS0yMCI+CiAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC0zeGwgZm9udC1ib2xkIHRleHQtY2VudGVyIG1iLTEyIj5XaHkgcmlkZXJzIHBpY2sgdXM8L2gyPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIG1kOmdyaWQtY29scy0zIGdhcC04Ij4KICAgICAgICAgIHtbWyLigJLwnZSjIiwiQWx3YXlzIG9uIHRpbWUiLCJEcml2ZXJzIHdpdGhpbiA1IG1pbnV0ZXMgaW4gbW9zdCBjaXRpZXMsIDI0LzcuIl0sWyLigJLijqd+IiwiVXBmcm9udCBwcmljaW5nIiwiU2VlIHRoZSBleGFjdCBwcmljZSBiZWZvcmUgeW91IGJvb2suIE5vIGhpZGRlbiBmZWVzLiJdLFsi4oCS8J+bpiIsIlNhZmVyIHJpZGVzIiwiQmFja2dyb3VuZC1jaGVja2VkIGRyaXZlcnMsIGluLWFwcCBlbWVyZ2VuY3ksIHNoYXJlLXRyaXAgd2l0aCBmcmllbmRzLiJdXS5tYXAoKFtlLHQsZF0pPT4oCiAgICAgICAgICAgIDxkaXYga2V5PXR0IGNsYXNzTmFtZT0iYmctZ3JheS0wMCByb3VuZGVZC0yeGwgcC02Ij48ZGl2IGNsYXNzTmFtZT0idGV4dC00eGwgbWItMyI+e2V9PC9kaXY+PGRpdiBjbGFzc05hbWU9ImZvbnQtYm9sZCB0ZXh0LWxnIG1iLTIiPnt0fTwvZGl2PjxwIGNsYXNzTmFtZT0idGV4dC1ncmF5LTYwMCI+e2R9PC9wPjwvZGl2PgogICAgICAgICAgKSl9CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KCiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT0iYmctYnJhbmQgdGV4dC13aGl0ZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTYgcHktMjAgdGV4dC1jZW50ZXIiPgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGV4dC0zeGwgZm9udC1ib2xkIG1iLTQiPkVhcm4gbW9yZSBiZWhpbmQgdGhlIHdoZWVsPC9oMj4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1sZyB0ZXh0LXdoaXRlLzkwIG1iLTgiPktlZXAgODAlIG9mIGV2ZXJ5IGZhcmUgKyAxMDAlIG9mIHRpcHMuIFdlZWtseSBkaXJlY3QgZGVwb3NpdC48L3A+CiAgICAgICAgICA8TGluayBocmVmPSIvZHJpdmUiIGNsYXNzTmFtZT0iYmctd2hpdGUgdGV4dC1icmFuZCBmb250LXNlbWlib2xkIHB4LTggcHktMyByb3VuZGVkLWxnIGlubGluZS1ibG9jayI+QXBwbHkgdG8gZHJpdmUg4oaSPC9MaW5rPgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CiAgICA8Lz4KICApOwp9
+import Link from "next/link";
+
+export default function Home() {
+  const benefits = [
+    {
+      icon: "⏰",
+      title: "Always on time",
+      description: "Drivers within 5 minutes in most cities, 24/7."
+    },
+    {
+      icon: "💵",
+      title: "Upfront pricing",
+      description: "See the exact price before you book. No hidden fees."
+    },
+    {
+      icon: "🛡️",
+      title: "Safer rides",
+      description: "Background-checked drivers, in-app emergency, and share-trip options."
+    }
+  ];
+
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-blue-600 to-[#1a4d8f] text-white">
+        <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+              Get there.<br />On time. Every time.
+            </h1>
+            <p className="mt-6 text-xl text-white/90">
+              Real upfront pricing. Trusted local drivers. No surge surprises hidden in fine print.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/get-app/iphone"
+                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+              >
+                Get app for iPhone
+              </Link>
+              <Link
+                href="/get-app/android"
+                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+              >
+                Get app for Android
+              </Link>
+            </div>
+            <p className="mt-4 text-sm text-white/70">
+              Need the app?{" "}
+              <Link href="/get-app" className="underline hover:text-white">
+                Choose your device →
+              </Link>
+            </p>
+          </div>
+
+          {/* Fare Estimator Card */}
+          <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-2xl">
+            <div className="font-bold text-lg mb-4 text-blue-600">Estimate your fare</div>
+            <input 
+              type="text"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600" 
+              placeholder="Pickup address" 
+            />
+            <input 
+              type="text"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600" 
+              placeholder="Where to?" 
+            />
+            <button className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+              See price
+            </button>
+            <p className="text-xs text-gray-500 mt-3">No signup required for estimate.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why riders pick us</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <div className="text-4xl mb-3">{benefit.icon}</div>
+              <div className="font-bold text-lg mb-2 text-gray-900">{benefit.title}</div>
+              <p className="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Driver CTA Section */}
+      <section className="bg-blue-600 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-20 text-center">
+          <h2 className="text-3xl font-bold mb-4">Earn more behind the wheel</h2>
+          <p className="text-lg text-white/90 mb-8">
+            Keep 80% of every fare + 100% of tips. Weekly direct deposit.
+          </p>
+          <Link 
+            href="/drive" 
+            className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg inline-block hover:bg-gray-100 transition"
+          >
+            Apply to drive →
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
