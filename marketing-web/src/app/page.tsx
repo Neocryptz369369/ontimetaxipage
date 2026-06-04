@@ -32,14 +32,14 @@ export default function Home() {
               Real upfront pricing. Trusted local drivers. No surge surprises hidden in fine print.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/get-app/iphone"
+              <Link 
+                href="/get-app/iphone" 
                 className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
               >
                 Get app for iPhone
               </Link>
-              <Link
-                href="/get-app/android"
+              <Link 
+                href="/get-app/android" 
                 className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
               >
                 Get app for Android
@@ -56,19 +56,24 @@ export default function Home() {
           {/* Fare Estimator Card */}
           <div className="bg-white text-gray-900 rounded-2xl p-6 shadow-2xl">
             <div className="font-bold text-lg mb-4 text-blue-600">Estimate your fare</div>
-            <input 
-              type="text"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600" 
-              placeholder="Pickup address" 
-            />
-            <input 
-              type="text"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600" 
-              placeholder="Where to?" 
-            />
-            <button className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
-              See price
-            </button>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input 
+                type="text" 
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600" 
+                placeholder="Pickup address" 
+              />
+              <input 
+                type="text" 
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600" 
+                placeholder="Where to?" 
+              />
+              <button 
+                type="submit"
+                className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+              >
+                See price
+              </button>
+            </form>
             <p className="text-xs text-gray-500 mt-3">No signup required for estimate.</p>
           </div>
         </div>
