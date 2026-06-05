@@ -14,22 +14,34 @@ import Link from "next/link";
 
 export default function CitiesPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-extrabold text-brand mb-4">Cities We Serve</h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cities.map((city) => (
-          <div key={city.name} className="border rounded-2xl p-6 shadow-sm">
-            <h2 className="text-2xl font-bold text-brand">{city.name}</h2>
-            <p className="mt-2 text-gray-600">{city.description}</p>
-            <Link
-              href={city.href}
-              className="inline-block mt-4 bg-brand text-white px-5 py-3 rounded-lg font-semibold"
-            >
-              Ride in {city.name.split(",")[0]}
-            </Link>
+    <>
+      <section className="bg-gradient-to-b from-blue-600 to-[#1a4d8f] text-white">
+        <div className="max-w-6xl mx-auto px-6 py-24 text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">Cities We Serve</h1>
+          <p className="mt-6 text-xl text-white/90 max-w-2xl mx-auto">
+            On-Time Taxi operates in cities across the country. Pick yours and book a ride in seconds.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cities.map((city) => (
+              <div key={city.name} className="border border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition bg-white">
+                <h2 className="text-2xl font-bold text-blue-700">{city.name}</h2>
+                <p className="mt-2 text-gray-600">{city.description}</p>
+                <Link
+                  href={city.href}
+                  className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold"
+                >
+                  Ride in {city.name.split(",")[0]}
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 }
