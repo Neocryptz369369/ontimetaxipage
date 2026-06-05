@@ -13,9 +13,9 @@ html{scroll-behavior:smooth}
   background-size: 16px 16px;
   background-position: 0 0, 8px 8px;
 }
-.taxi-checker-top, .taxi-checker-bottom { height: 12px; }
-.taxi-checker-left, .taxi-checker-right { width: 12px; }
+.taxi-checker-top, .taxi-checker-bottom { height: 16px; }
+.taxi-checker-left, .taxi-checker-right { width: 16px; }
 @media (min-width: 768px) {
-  .taxi-checker-top, .taxi-checker-bottom { height: 16px; }
-  .taxi-checker-left, .taxi-checker-right { width: 16px; }
+  .taxi-checker-top, .taxi-checker-bottom { height: 24px; }
+  .taxi-checker-left, .taxi-checker-right { width: 24px; }
 }
