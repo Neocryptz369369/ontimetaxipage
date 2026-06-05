@@ -10,7 +10,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-white text-brand">
-        <header className="border-b bg-white sticky top-0 z-50">
+        <div className="taxi-checker taxi-checker-top fixed top-0 left-0 right-0 z-[60]" />
+        <div className="taxi-checker taxi-checker-bottom fixed bottom-0 left-0 right-0 z-[60]" />
+        <div className="taxi-checker taxi-checker-left fixed top-0 bottom-0 left-0 z-[60]" />
+        <div className="taxi-checker taxi-checker-right fixed top-0 bottom-0 right-0 z-[60]" />
+        <div className="pt-6 md:pt-8 pb-6 md:pb-8 px-6 md:px-8">
+        <header className="border-b bg-white sticky top-6 md:top-8 z-50">
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="font-extrabold text-xl">🚕 On-Time Taxi</Link>
             <nav className="hidden md:flex gap-6 text-sm font-medium">
@@ -66,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>all rights reserved.</div>
           </div>
         </footer>
+              </div>
       </body>
     </html>
   );
