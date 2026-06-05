@@ -11,6 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <aside className="w-60 bg-brand-ink text-white p-5 space-y-1">
             <div className="text-xl font-extrabold mb-6">On-Time<br/>Taxi <span className="text-brand">·</span> Admin</div>
             <NavLink href="/">Dashboard</NavLink>
+            <NavLink href="/executive">Executive Control</NavLink>
             <NavLink href="/rides">Rides</NavLink>
             <NavLink href="/drivers">Drivers</NavLink>
             <NavLink href="/riders">Riders</NavLink>

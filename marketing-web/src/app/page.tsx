@@ -32,18 +32,10 @@ export default function Home() {
               Real upfront pricing. Trusted local drivers. No surge surprises hidden in fine print.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link 
-                href="/get-app/iphone" 
-                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
-              >
-                Get app for iPhone
-              </Link>
-              <Link 
-                href="/get-app/android" 
-                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
-              >
-                Get app for Android
-              </Link>
+              <Link href="/get-app/rider/iphone" className="bg-white text-blue-600 font-semibold px-5 py-3 rounded-lg hover:bg-gray-100 transition">🚖 Rider · iPhone</Link>
+              <Link href="/get-app/rider/android" className="bg-white text-blue-600 font-semibold px-5 py-3 rounded-lg hover:bg-gray-100 transition">🚖 Rider · Android</Link>
+              <Link href="/get-app/driver/iphone" className="bg-yellow-400 text-blue-900 font-semibold px-5 py-3 rounded-lg hover:bg-yellow-300 transition">🧑‍✈️ Driver · iPhone</Link>
+              <Link href="/get-app/driver/android" className="bg-yellow-400 text-blue-900 font-semibold px-5 py-3 rounded-lg hover:bg-yellow-300 transition">🧑‍✈️ Driver · Android</Link>
             </div>
             <p className="mt-4 text-sm text-white/70">
               Need the app?{" "}
