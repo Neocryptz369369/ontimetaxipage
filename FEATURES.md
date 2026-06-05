@@ -93,10 +93,10 @@
 - [ ] Database (riders, drivers, rides, payments)
 ---
 ## PENDING CLARIFICATION
-- [ ] Base fare amount ($?)
-- [ ] Per-mile rate ($?)
-- [ ] Platform fee percentage (%?)
-- [ ] "Out of town" definition (miles or boundary?)
+- [x] Base fare: $2.00
+- [x] Per-mile: $1.25 (in-city), $1.00 (out-of-town 100+ miles)
+- [x] Platform fee: 20% (you keep) / 80% driver
+- [x] Out-of-town: 100+ mile trips
 - [ ] Logo file (placeholder for now)
 ---
 **Total Features:** ~125 identified  
