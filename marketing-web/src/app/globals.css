@@ -10,12 +10,12 @@ html{scroll-behavior:smooth}
     linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%),
     linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%);
   background-color: #dc2626; /* red-600 */
-  background-size: 32px 32px;
-  background-position: 0 0, 16px 16px;
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
 }
-.taxi-checker-top, .taxi-checker-bottom { height: 24px; }
-.taxi-checker-left, .taxi-checker-right { width: 24px; }
+.taxi-checker-top, .taxi-checker-bottom { height: 12px; }
+.taxi-checker-left, .taxi-checker-right { width: 12px; }
 @media (min-width: 768px) {
-  .taxi-checker-top, .taxi-checker-bottom { height: 32px; }
-  .taxi-checker-left, .taxi-checker-right { width: 32px; }
+  .taxi-checker-top, .taxi-checker-bottom { height: 16px; }
+  .taxi-checker-left, .taxi-checker-right { width: 16px; }
 }
