@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>On Time Taxi — Visual Mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y:#FFC629; --y2:#FFD75A;
+  --k:#0E0E10; --slate:#1F2430; --slate2:#2A2F3D;
+  --w:#fff; --gray:#8A8F98; --line:#E7E8EC;
+  --green:#1DB954; --red:#E5484D;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#111;color:#eee;padding:40px 20px;min-height:100vh}
+h1{font-family:'Inter Tight';font-size:38px;color:var(--y);text-align:center;margin-bottom:6px}
+.sub{text-align:center;color:#aaa;margin-bottom:40px;font-size:15px}
+.sub b{color:var(--y)}
+.grid{display:flex;flex-wrap:wrap;gap:32px;justify-content:center;align-items:flex-start}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.col h3{font-family:'Inter Tight';font-size:14px;color:#fff;letter-spacing:.5px;text-transform:uppercase}
+.col small{color:#888;font-size:11px}
+
+/* iPhone frame */
+.phone{
+  width:320px;height:660px;background:#000;border-radius:44px;
+  padding:12px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 2px #222;
+  position:relative;
+}
+.phone::before{
+  content:'';position:absolute;top:18px;left:50%;transform:translateX(-50%);
+  width:110px;height:26px;background:#000;border-radius:20px;z-index:10;
+}
+.screen{
+  width:100%;height:100%;border-radius:32px;overflow:hidden;background:var(--w);
+  position:relative;font-size:13px;color:var(--k);
+}
+.status{
+  height:38px;display:flex;justify-content:space-between;align-items:flex-end;
+  padding:0 26px 6px;font-weight:600;font-size:11px;color:var(--k);
+}
+.status .r{display:flex;gap:5px;align-items:center}
+
+/* === SCREEN 1: Splash === */
+.s1{background:linear-gradient(160deg,var(--y) 0%,var(--y2) 100%);color:var(--k);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:60px 28px 36px}
+.logo-circle{width:120px;height:120px;border-radius:50%;background:var(--k);display:flex;align-items:center;justify-content:center;font-size:60px;margin-top:30px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.logo-circle span{color:var(--y);font-weight:800}
+.brand{font-family:'Inter Tight';font-size:30px;font-weight:800;margin-top:18px;letter-spacing:-.5px}
+.tag{font-size:15px;margin-top:6px;opacity:.75;font-weight:500}
+.btn{width:100%;padding:15px;border-radius:14px;font-weight:600;font-size:14px;border:none;cursor:pointer;font-family:inherit}
+.btn-k{background:var(--k);color:var(--y)}
+.btn-out{background:transparent;color:var(--k);border:2px solid var(--k)}
+.s1 .btns{width:100%;display:flex;flex-direction:column;gap:10px}
+
+/* === SCREEN 2: Home/Book === */
+.s2{background:#F4F5F7;display:flex;flex-direction:column;height:calc(100% - 38px)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:8px 18px 12px;background:#fff}
+.topbar .menu{font-size:22px}
+.topbar .logo{font-family:'Inter Tight';font-weight:800;font-size:16px}
+.topbar .logo span{color:var(--y);background:var(--k);padding:2px 6px;border-radius:6px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.where{margin:14px 16px;background:#fff;border-radius:14px;padding:16px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.where .dot{width:10px;height:10px;border-radius:50%;background:var(--green)}
+.where .lbl{font-weight:600;font-size:15px;color:#333}
+.quick{display:flex;gap:8px;padding:0 16px;margin-bottom:10px}
+.chip{background:#fff;padding:7px 12px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid var(--line)}
+.map{flex:1;background:linear-gradient(135deg,#dfe6ec 0%,#cbd5dc 100%);position:relative;margin:6px 16px;border-radius:16px;overflow:hidden}
+.road{position:absolute;background:#fff;opacity:.7}
+.road.h{height:4px;left:0;right:0;top:40%}
+.road.v{width:4px;top:0;bottom:0;left:55%}
+.road.d{width:3px;height:60%;top:20%;left:25%;transform:rotate(35deg);transform-origin:top}
+.pin{position:absolute;font-size:22px}
+.pin.me{top:48%;left:50%;transform:translate(-50%,-50%);font-size:14px;background:var(--y);color:var(--k);padding:4px 8px;border-radius:50%;font-weight:700;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.pin.car{filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.sched{margin:10px 16px 14px;background:#fff;border-radius:12px;padding:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:500;border:1px solid var(--line)}
+
+/* === SCREEN 3: Tier select === */
+.s3{background:#fff;display:flex;flex-direction:column;height:calc(100% - 38px)}
+.s3 .back{padding:10px 16px;font-size:14px;font-weight:600}
+.routebar{margin:0 16px 10px;background:#F4F5F7;border-radius:12px;padding:12px;font-size:12px;color:#666;display:flex;justify-content:space-between;align-items:center}
+.routebar b{color:var(--k);font-size:13px}
+.tiers{flex:1;overflow:hidden;padding:0 8px}
+.tier{display:flex;align-items:center;gap:10px;padding:11px 10px;border-radius:12px;cursor:pointer}
+.tier.sel{background:#FFF7DC;border:2px solid var(--y)}
+.tier .ic{width:42px;height:42px;border-radius:10px;background:#F4F5F7;display:flex;align-items:center;justify-content:center;font-size:22px}
+.tier .info{flex:1}
+.tier .name{font-weight:700;font-size:14px}
+.tier .meta{font-size:11px;color:#888;margin-top:1px}
+.tier .price{font-weight:700;font-size:15px}
+.s3 .pay{margin:8px 16px;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:13px;display:flex;justify-content:space-between;align-items:center}
+.s3 .cta{margin:10px 16px 16px;padding:16px;background:var(--y);color:var(--k);border-radius:14px;text-align:center;font-weight:700;font-size:15px}
+
+/* === SCREEN 4: En route === */
+.s4{background:#fff;display:flex;flex-direction:column;height:calc(100% - 38px)}
+.s4 .map{flex:1;margin:0;border-radius:0;background:linear-gradient(135deg,#dfe6ec 0%,#cbd5dc 100%);position:relative;overflow:hidden}
+.eta-pill{position:absolute;top:16px;left:50%;transform:translateX(-50%);background:var(--k);color:var(--y);padding:8px 16px;border-radius:30px;font-weight:700;font-size:13px}
+.car-anim{position:absolute;top:35%;left:30%;font-size:28px}
+.dest{position:absolute;bottom:35%;right:25%;font-size:22px}
+.path{position:absolute;top:38%;left:33%;width:35%;height:35%;border-top:3px dashed var(--y);border-right:3px dashed var(--y);border-top-right-radius:30px}
+.driver-card{background:#fff;padding:18px 18px 16px;border-top-left-radius:24px;border-top-right-radius:24px;margin-top:-20px;position:relative;box-shadow:0 -10px 30px rgba(0,0,0,.1)}
+.driver-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.driver-pic{width:48px;height:48px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--k)}
+.driver-name{font-weight:700;font-size:15px}
+.driver-meta{font-size:12px;color:#666;margin-top:2px}
+.car-info{margin-left:auto;text-align:right;font-size:12px;color:#333;font-weight:600}
+.plate{background:var(--k);color:var(--y);padding:3px 6px;border-radius:4px;font-size:11px;letter-spacing:1px;margin-top:3px;display:inline-block}
+.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+.act{background:#F4F5F7;padding:10px 4px;border-radius:10px;text-align:center;font-size:11px;font-weight:600}
+.act.sos{background:#FEE;color:var(--red)}
+.act .ico{font-size:18px;display:block;margin-bottom:2px}
+
+/* === SCREEN 5: Driver Online === */
+.s5{background:var(--k);color:#fff;height:calc(100% - 38px);display:flex;flex-direction:column;padding:14px}
+.s5 .hello{font-size:13px;color:#bbb}
+.s5 .earn{font-family:'Inter Tight';font-size:34px;font-weight:800;color:var(--y);margin:4px 0 14px}
+.online-toggle{background:linear-gradient(135deg,var(--y),var(--y2));color:var(--k);padding:18px;border-radius:18px;text-align:center;font-weight:800;font-size:17px;letter-spacing:.5px;box-shadow:0 8px 24px rgba(255,198,41,.3)}
+.s5 .map{flex:1;background:linear-gradient(135deg,#2a2f3d,#1a1e28);margin:14px 0;border-radius:16px;position:relative;overflow:hidden}
+.s5 .map .pin.me{background:var(--y);color:var(--k);border-color:var(--k)}
+.s5 .map .road{background:#3a4050}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.stat{background:var(--slate);padding:12px;border-radius:12px}
+.stat .v{font-family:'Inter Tight';font-size:20px;font-weight:800;color:var(--y)}
+.stat .l{font-size:11px;color:#999;margin-top:2px}
+.tabs{display:flex;justify-content:space-around;padding-top:6px;border-top:1px solid #2a2f3d}
+.tab{font-size:11px;color:#888;text-align:center}
+.tab.act{color:var(--y);font-weight:700}
+.tab .ti{display:block;font-size:18px;margin-bottom:2px}
+
+/* === SCREEN 6: Incoming === */
+.s6{background:var(--k);color:#fff;height:calc(100% - 38px);display:flex;flex-direction:column;padding:20px;justify-content:space-between}
+.s6 .countdown{background:var(--y);color:var(--k);width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight';font-weight:800;font-size:24px;margin:10px auto 0}
+.s6 .ttl{text-align:center;font-family:'Inter Tight';font-size:22px;font-weight:800;margin-top:14px}
+.s6 .ttl span{color:var(--y)}
+.dets{background:var(--slate);border-radius:16px;padding:18px;margin:18px 0}
+.det-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #2a2f3d;font-size:13px}
+.det-row:last-child{border:none}
+.det-row b{color:var(--y);font-size:15px}
+.s6 .row{display:flex;gap:10px}
+.s6 .row .btn{padding:18px;border-radius:14px;font-weight:700;font-size:15px;flex:1;text-align:center}
+.decline{background:#3a3f4d;color:#fff}
+.accept{background:var(--green);color:#fff}
+
+/* Annotations */
+.note{max-width:280px;color:#aaa;font-size:12px;text-align:center;line-height:1.5;margin-top:8px}
+
+footer{text-align:center;color:#666;font-size:13px;margin-top:50px;padding-bottom:20px}
+footer b{color:var(--y)}
+</style>
+</head>
+<body>
+
+<h1>🚖 On Time Taxi</h1>
+<p class="sub"><b>Everyone needs a ride.</b> &nbsp;·&nbsp; Visual mockups — Rider &amp; Driver apps</p>
+
+<div class="grid">
+
+  <!-- Screen 1: Splash -->
+  <div class="col">
+    <div class="phone"><div class="screen s1">
+      <div class="logo-circle"><span>OT</span></div>
+      <div style="text-align:center">
+        <div class="brand">On Time Taxi</div>
+        <div class="tag">Everyone needs a ride.</div>
+      </div>
+      <div class="btns">
+        <button class="btn btn-k">📱  Continue with Phone</button>
+        <button class="btn btn-out">Continue as Driver</button>
+      </div>
+    </div></div>
+    <h3>1 · Splash / Login</h3>
+    <small>First impression. Yellow = taxi heritage.</small>
+  </div>
+
+  <!-- Screen 2: Home -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:41</span><span class="r">●●● 5G 🔋</span></div>
+      <div class="s2">
+        <div class="topbar">
+          <div class="menu">☰</div>
+          <div class="logo">On Time <span>Taxi</span></div>
+          <div class="avatar">J</div>
+        </div>
+        <div class="where">
+          <div class="dot"></div>
+          <div class="lbl" style="color:#999">Where to?</div>
+        </div>
+        <div class="quick">
+          <div class="chip">🏠 Home</div>
+          <div class="chip">💼 Work</div>
+          <div class="chip">✈️ Airport</div>
+        </div>
+        <div class="map">
+          <div class="road h"></div><div class="road v"></div><div class="road d"></div>
+          <div class="pin car" style="top:25%;left:30%">🚕</div>
+          <div class="pin car" style="top:60%;left:70%">🚕</div>
+          <div class="pin car" style="top:30%;left:75%">🚕</div>
+          <div class="pin me">●</div>
+        </div>
+        <div class="sched"><span>⏰ Schedule for later</span><span style="color:#999">›</span></div>
+      </div>
+    </div></div>
+    <h3>2 · Book a Ride</h3>
+    <small>Live drivers visible. One tap to start.</small>
+  </div>
+
+  <!-- Screen 3: Tier Select -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:42</span><span class="r">●●● 5G 🔋</span></div>
+      <div class="s3">
+        <div class="back">← Choose your ride</div>
+        <div class="routebar"><span>📍 Jeffersonville → Louisville Airport</span><b>12.4 mi · 22 min</b></div>
+        <div class="tiers">
+          <div class="tier sel">
+            <div class="ic">🚗</div>
+            <div class="info"><div class="name">Standard</div><div class="meta">4 seats · 6 min away</div></div>
+            <div class="price">$18.50</div>
+          </div>
+          <div class="tier">
+            <div class="ic">🚙</div>
+            <div class="info"><div class="name">XL</div><div class="meta">7 seats · 8 min away</div></div>
+            <div class="price">$26.00</div>
+          </div>
+          <div class="tier">
+            <div class="ic">🌾</div>
+            <div class="info"><div class="name">Country Run</div><div class="meta">Rural flat-rate</div></div>
+            <div class="price">$24.00</div>
+          </div>
+          <div class="tier">
+            <div class="ic">🐾</div>
+            <div class="info"><div class="name">Pet-Friendly</div><div class="meta">+$5 · 10 min away</div></div>
+            <div class="price">$23.50</div>
+          </div>
+          <div class="tier">
+            <div class="ic">♿</div>
+            <div class="info"><div class="name">Wheelchair</div><div class="meta">WAV · 12 min away</div></div>
+            <div class="price">$18.50</div>
+          </div>
+          <div class="tier">
+            <div class="ic">🛣️</div>
+            <div class="info"><div class="name">Long Haul</div><div class="meta">Out-of-state, same day</div></div>
+            <div class="price">Quote</div>
+          </div>
+        </div>
+        <div class="pay"><span>💳 Square ···· 4242</span><span style="color:#999">▾</span></div>
+        <div class="cta">Confirm $18.50  →</div>
+      </div>
+    </div></div>
+    <h3>3 · Pick Tier</h3>
+    <small>Upfront flat quotes. No mystery surge.</small>
+  </div>
+
+  <!-- Screen 4: Driver en route -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status"><span>9:43</span><span class="r">●●● 5G 🔋</span></div>
+      <div class="s4">
+        <div class="map">
+          <div class="eta-pill">🚕 Arriving in 6 min</div>
+          <div class="path"></div>
+          <div class="car-anim">🚕</div>
+          <div class="dest">📍</div>
+        </div>
+        <div class="driver-card">
+          <div class="driver-row">
+            <div class="driver-pic">MR</div>
+            <div>
+              <div class="driver-name">Mike R. &nbsp; ⭐ 4.9</div>
+              <div class="driver-meta">2,142 rides · Clark County local</div>
+            </div>
+            <div class="car-info">
+              Black Camry
+              <div class="plate">ABC 123</div>
+            </div>
+          </div>
+          <div class="actions">
+            <div class="act"><span class="ico">💬</span>Message</div>
+            <div class="act"><span class="ico">📞</span>Call</div>
+            <div class="act"><span class="ico">🛡️</span>Share</div>
+            <div class="act sos"><span class="ico">🆘</span>SOS</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <h3>4 · Driver En Route</h3>
+    <small>Live map · SOS · share trip with family.</small>
+  </div>
+
+  <!-- Screen 5: Driver Home -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status" style="color:#fff;background:var(--k)"><span>9:41</span><span class="r">●●● 5G 🔋</span></div>
+      <div class="s5">
+        <div class="hello">Hey Mike 👋</div>
+        <div class="earn">$142.50 <span style="font-size:13px;color:#888;font-weight:500">today</span></div>
+        <div class="online-toggle">⚡ GO ONLINE</div>
+        <div class="map">
+          <div class="road h"></div><div class="road v"></div>
+          <div class="pin me" style="top:50%;left:50%">●</div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="v">8</div><div class="l">Rides today</div></div>
+          <div class="stat"><div class="v">⭐ 4.9</div><div class="l">Rating</div></div>
+        </div>
+        <div class="tabs">
+          <div class="tab act"><span class="ti">🏠</span>Home</div>
+          <div class="tab"><span class="ti">💰</span>Earnings</div>
+          <div class="tab"><span class="ti">📋</span>Trips</div>
+          <div class="tab"><span class="ti">⚙️</span>More</div>
+        </div>
+      </div>
+    </div></div>
+    <h3>5 · Driver Home</h3>
+    <small>Dark mode. Earnings front &amp; center.</small>
+  </div>
+
+  <!-- Screen 6: Incoming ride -->
+  <div class="col">
+    <div class="phone"><div class="screen">
+      <div class="status" style="color:#fff;background:var(--k)"><span>9:44</span><span class="r">●●● 5G 🔋</span></div>
+      <div class="s6">
+        <div>
+          <div class="countdown">15s</div>
+          <div class="ttl">New ride · <span>Standard</span></div>
+          <div class="dets">
+            <div class="det-row"><span>Pickup</span><b>4 min away</b></div>
+            <div class="det-row"><span>Drop-off</span><b>12.4 mi · 22 min</b></div>
+            <div class="det-row"><span>Route</span><span style="text-align:right;font-size:11px">Jeffersonville → Louisville</span></div>
+            <div class="det-row"><span>Estimated payout</span><b>$14.80</b></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="btn decline">DECLINE</div>
+          <div class="btn accept">ACCEPT ✓</div>
+        </div>
+      </div>
+    </div></div>
+    <h3>6 · Incoming Request</h3>
+    <small>Full-screen takeover. Big buttons.</small>
+  </div>
+
+</div>
+
+<footer>
+Mockups · <b>On Time Taxi</b> · Clark County, IN · v0.1 — colors will lock to your logo once received
+</footer>
+
+</body>
+</html>

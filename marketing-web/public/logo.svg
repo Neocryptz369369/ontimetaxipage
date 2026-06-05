@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80">
+  <rect x="20" y="20" width="50" height="40" rx="6" fill="#FFCC00" stroke="#0a2540" stroke-width="3"/>
+  <rect x="32" y="14" width="26" height="10" rx="2" fill="#0a2540"/>
+  <text x="45" y="48" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="20" fill="#0a2540" font-weight="900">OT</text>
+  <text x="90" y="46" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="900" fill="#0a2540">On-Time</text>
+  <text x="90" y="68" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#1a4d8f">Taxi</text>
+</svg>

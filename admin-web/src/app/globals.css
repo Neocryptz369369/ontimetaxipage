@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+body { background: #fafafa; color: #0b0b0f; }
+.card { @apply bg-white rounded-2xl border border-neutral-200 p-5 shadow-sm; }
+.btn  { @apply px-4 py-2 rounded-lg font-semibold; }
+.btn-primary { @apply btn bg-brand text-brand-ink hover:opacity-90; }
+.btn-ghost   { @apply btn border border-neutral-300 hover:bg-neutral-100; }
+.kpi { @apply text-3xl font-extrabold; }
+table.dt { @apply w-full text-sm; }
+table.dt th { @apply text-left text-neutral-500 font-medium py-2 border-b border-neutral-200; }
+table.dt td { @apply py-2 border-b border-neutral-100; }
+.badge { @apply inline-block text-xs font-semibold px-2 py-0.5 rounded-full; }

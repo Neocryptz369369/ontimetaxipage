@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{scroll-behavior:smooth}
+
+
+/* Taxi checkerboard border (red + black) — wraps every page */
+.taxi-checker {
+  background-image:
+    linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%),
+    linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%);
+  background-color: #dc2626; /* red-600 */
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+.taxi-checker-top, .taxi-checker-bottom { height: 16px; }
+.taxi-checker-left, .taxi-checker-right { width: 16px; }
+@media (min-width: 768px) {
+  .taxi-checker-top, .taxi-checker-bottom { height: 24px; }
+  .taxi-checker-left, .taxi-checker-right { width: 24px; }
+}
